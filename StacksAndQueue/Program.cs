@@ -32,7 +32,7 @@ namespace StacksAndQueue
                         while (flag1)
                         {
                             QueueList queueList= new QueueList();
-                            Console.WriteLine("\n.Select option to perform \n1.Create Queue of List(Enqueue) \n2.Exit");
+                            Console.WriteLine("\n.Select option to perform \n1.Create Queue of List(Enqueue) \n2.Dequeue \n3.Exit");
                             int option1=Convert.ToInt32(Console.ReadLine());
                             switch (option1)
                             {
@@ -42,7 +42,14 @@ namespace StacksAndQueue
                                     queueList.Enqueue(70);
                                     queueList.Display();
                                     break;
-                                case 2:
+                                    case 2:
+                                    queueList.Enqueue(56);
+                                    queueList.Enqueue(30);
+                                    queueList.Enqueue(70);
+                                    queueList.Display();
+                                    queueList.Dequeue();                     
+                                    break;
+                                case 3:
                                     flag1=false;
                                     break;
                             }
