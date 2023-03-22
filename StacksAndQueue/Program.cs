@@ -9,7 +9,7 @@ namespace StacksAndQueue
             while(flag)
             {
                 LinkedListStacks stacks= new LinkedListStacks();
-                Console.WriteLine("\nChoose Option to Perform \n1.Create Stack and Push \n2.Peek and Pop\n3.Exit");
+                Console.WriteLine("\nChoose Option to Perform \n1.Create Stack and Push \n2.Peek and Pop \n3.Option to Perform Queue \n4.Exit");
                 int option=Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -28,6 +28,27 @@ namespace StacksAndQueue
                         stacks.Dsiplay();
                         break;
                         case 3:
+                        bool flag1=true;
+                        while (flag1)
+                        {
+                            QueueList queueList= new QueueList();
+                            Console.WriteLine("\n.Select option to perform \n1.Create Queue of List(Enqueue) \n2.Exit");
+                            int option1=Convert.ToInt32(Console.ReadLine());
+                            switch (option1)
+                            {
+                                case 1:
+                                    queueList.Enqueue(56);
+                                    queueList.Enqueue(30);
+                                    queueList.Enqueue(70);
+                                    queueList.Display();
+                                    break;
+                                case 2:
+                                    flag1=false;
+                                    break;
+                            }
+                        }
+                        break;
+                        case 4:
                         flag = false;
                         break;
                 }
